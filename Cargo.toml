@@ -1,7 +1,21 @@
 [package]
-name = "UNNAMED"
+name = "kube-lite"
 version = "0.1.0"
 authors = ["Mohamed Alameen <devameen90@gmail.com>", "Ravi Shankar <wafflespeanut@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+failure = "0.1"
+failure_derive = "0.1"
+futures = "0.1.25"
+http = "0.1"
+hyper = "0.12"
+hyper-tls = "0.3"
+log = "0.4"
+native-tls = "0.2"
+openssl = { version = "0.10", features = ["vendored"] }
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+tokio = { version = "0.1", features = ["async-await-preview"] }
+tokio-async-await = "0.1"

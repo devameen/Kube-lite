@@ -7,10 +7,18 @@ else
 	CACHE_ARG =
 endif
 
+all: fmt build test
+
 clean:
 	if [ -d "target" ]; then \
 		rm -rf target ; \
 	fi
+
+prepare:
+	rustup component add rustfmt --toolchain nightly
+
+fmt:
+	cargo fmt --all
 
 build:
 	cargo build
