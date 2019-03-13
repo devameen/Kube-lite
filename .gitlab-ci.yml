@@ -1,0 +1,19 @@
+stages:
+ - test
+ - build
+
+test:crate:
+  image: ekidd/rust-musl-builder:nightly
+  stage: test
+  script:
+    - make test
+  only:
+    - branches
+
+build:crate:
+  image: ekidd/rust-musl-builder:nightly
+  stage: build
+  script:
+    - make build  # (in production, this should be release build)
+  only:
+    - branches
